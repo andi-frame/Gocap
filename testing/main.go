@@ -43,7 +43,7 @@ func getUsers(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": result.Error.Error()})
 		return
 	}
-	c.JSON(http.StatusOK, users)
+	c.IndentedJSON(http.StatusOK, users)
 }
 
 func getUserByID(c *gin.Context) {
